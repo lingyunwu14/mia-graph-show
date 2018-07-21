@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------------
-   (c) Telefónica I+D, 2013
+   (c) TelefÃ³nica I+D, 2013
    Author: Paulo Villegas
 
    This script is free software: you can redistribute it and/or modify
@@ -83,7 +83,7 @@ function D3ok() {
     .range([0, HEIGHT]);
   var zoomScale = d3.scale.linear()
     .domain([1,6])
-    .range([0.1,6])
+    .range([1,6])
     .clamp(true);
 
 /* .......................................................................... */
