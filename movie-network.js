@@ -259,7 +259,7 @@ function D3ok() {
     svg.call( d3.behavior.zoom()
 	      .x(xScale)
 	      .y(yScale)
-	      .scaleExtent([1, 6])
+	      .scaleExtent([0.1, 6])
 	      .on("zoom", doZoom) );
 
     // ------- Create the elements of the layout (links and nodes) ------
