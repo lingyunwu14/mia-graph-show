@@ -190,6 +190,9 @@ function D3ok() {
       info += '<div class=f><span class=l>Year</span>: ' + n.year 
            + '<span class=l style="margin-left:1em;">Duration</span>: ' 
            + n.duration + '</div>';
+    if( n.index )
+      info += '<div class=f><span class=l>Index </span>: <span class=d>' 
+           + n.index + '</span></div>';
     if( n.tag )
       info += '<div class=f><span class=l>Tag </span>: <span class=d>' 
            + n.tag + '</span></div>';
@@ -210,12 +213,22 @@ function D3ok() {
            + n.title + '</span></div>';
     if( n.links ) {
       info += '<div class=f><span class=l>Related To </span>: ';
-      n.links.forEach( function(idx) {
+      n.links.forEach( function(idx,index) {
 	info += '[<a href="javascript:void(0);" onclick="selectMovie('  
-	     + idx + ',true);">' + nodeArray[idx].label + '</a>]'
+	     + idx + ',true);">' + nodeArray[idx].label + '</a>'
+       +' <span class=d>' + n.links_prob[index] + '</span>]'
       });
       info += '</div>';
     }
+  //   if( n.links_prob ) {
+  //     // info += '<div class=f><span class=l>Related Prob </span>: <span class=d>' 
+  //     //      + n.links_prob[0] +'</span> <span class=d>' + n.links_prob[1] + '</span></div>';
+  //     info += '<div class=f><span class=l>Related Prob </span>: ';
+  //     n.links_prob.forEach( function(prob) {
+  // info += '<span class=d>' + prob + '</span> '
+  //     });
+  //     info += '</div>';
+  //   }
     return info;
   }
 
@@ -285,8 +298,9 @@ function D3ok() {
       .attr('id', function(d) { return "c" + d.index; } )
       .attr('class', function(d) { return 'node level'+d.level;} )
       .attr('r', function(d) { return node_size(d.score || 3); } )
+      // .attr('style',"fill:yellow")
       .attr('pointer-events', 'all')
-      //.on("click", function(d) { highlightGraphNode(d,true,this); } )    
+      // .on("click", function(d) { highlightGraphNode(d,true,this); } )
       .on("click", function(d) { showMoviePanel(d); } )
       .on("mouseover", function(d) { highlightGraphNode(d,true,this);  } )
       .on("mouseout",  function(d) { highlightGraphNode(d,false,this); } );
@@ -346,6 +360,8 @@ function D3ok() {
       console.log(" ..circle",circle.attr('id'),"BEFORE:",circle.attr("class"));
       circle
 	.classed( 'main', on );
+      // if( on ) {circle.style('fill','green')}
+      //   else {circle.style('fill','yellow')}
       label
 	.classed( 'on', on || currentZoom >= SHOW_THRESHOLD );
       label.selectAll('text')
