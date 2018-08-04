@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Yamm! MIA Graph</title>
     <link rel="stylesheet" href="mia-graph.css"/>
-    <link rel="shortcut icon" href="img/popcha.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/tigercat.ico" type="image/x-icon">
     <script>
       // Sniff MSIE version
       // http://james.padolsey.com/javascript/detect-ie-in-js-using-conditional-comments/
@@ -48,12 +48,12 @@
 
   </div>
 
-  <div id="movieNetwork"></div>
+  <div id="knowledgeGraph"></div>
 
   <div id="sidepanel">
 
     <div id="title">
-      <img src="img/popcha-100.png"/><br/>Movie Network<br/>
+      <img src="img/tigercat-100.png"/><br/>Knowledge Graph<br/>
 
       <!-- <a href="javascript:void(0);" 
               onClick="zoomCall(0.5);" style="pointer-events: all;">+</a>
@@ -69,32 +69,29 @@
     <div id="help" class="panel_off">
       <img src="img/close.png" style="float: right;" 
            onClick="toggleDiv('help');"/>
-      This is a subset of the movie network produced from data in the
-      mobile <a href="https://www.popcha.tv">PopCha!</a> app. Movies
-      relate to each other <em>as they get picked by PopCha! users</em> 
-      (note that movie details are <strong>not</strong> used to build the 
-      graph).
+      This is a subset of the knowledge network produced from data in the
+      MIA200m. Tags relate to each other <em>as they get picked by Tiger Cat! </em> 
 
       <ul>
-        <li>Hover over a node to see the movie title, and to highlight
-        the movies related to it.</li>
+        <li>Hover over a node to see the tag title , and to highlight
+        the tags related to it.</li>
 
-        <li>Click on a node to show movie details. It will open up a
+        <li>Click on a node to show tag details. It will open up a
         side panel.</li>
 
-        <li>On the movie details panel, you can click on the <em>target</em> 
-        icon to center the graph on that movie. And clicking on the link to
-        a related movie will move to that movie (in the graph and in the
+        <li>On the tag details panel, you can click on the <em>target</em> 
+        icon to center the graph on that tag. And clicking on the link to
+        a related tag will move to that tag (in the graph and in the
         panel)</li>
 
         <li>You can use you usual browser controls to zoom and pan
-        over the graph. If you zoom in when centred on a movie, the
+        over the graph. If you zoom in when centred on a tag, the
         graph will expand around it.</li>
 
-        <li>Above a certain zoom level, movie titles are automatically
+        <li>Above a certain zoom level, tag titles are automatically
         displayed for all the nodes.</li>
       </ul>
-      For additional information, check the <strong><a href="" onClick="return toggleDiv('faq');">FAQ</a></strong>.
+      <!-- For additional information, check the <strong><a href="" onClick="return toggleDiv('faq');">FAQ</a></strong>. -->
     </div>
 
     <div id="movieInfo" class="panel_off"></div>
