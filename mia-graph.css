@@ -247,7 +247,7 @@ div#movieInfo span.l {
 /* ....................................................................... */
 /* SVG elements */
 
-div#movieNetwork svg {
+div#knowledgeGraph svg {
     background-color: white;
     cursor: move;
 }
@@ -272,8 +272,13 @@ circle.level2 {
 }
 
 circle.level3 {
-    fill-opacity: 0.5;
-    stroke-opacity: 0.5;
+    fill-opacity: 0.6;
+    stroke-opacity: 0.6;
+}
+
+circle.level4 {
+    fill-opacity: 0.4;
+    stroke-opacity: 0.4;
 }
 
 circle.sibling {
