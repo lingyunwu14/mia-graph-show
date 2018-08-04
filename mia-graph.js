@@ -95,7 +95,7 @@ function D3ok() {
     .linkStrength( function(d,idx) { return d.weight; } );
 
   // Add to the page the SVG element that will contain the movie network
-  var svg = d3.select("#movieNetwork").append("svg:svg")
+  var svg = d3.select("#knowledgeGraph").append("svg:svg")
     .attr('xmlns','http://www.w3.org/2000/svg')
     .attr("width", WIDTH)
     .attr("height", HEIGHT)
@@ -298,7 +298,8 @@ function D3ok() {
       .attr('id', function(d) { return "c" + d.index; } )
       .attr('class', function(d) { return 'node level'+d.level;} )
       .attr('r', function(d) { return node_size(d.score || 3); } )
-      // .attr('style',"fill:yellow")
+      // .attr('style', "fill:#" + "b22222")
+      .attr('style', function(d) { return "fill:#" + d.color;} )
       .attr('pointer-events', 'all')
       // .on("click", function(d) { highlightGraphNode(d,true,this); } )
       .on("click", function(d) { showMoviePanel(d); } )
@@ -360,8 +361,8 @@ function D3ok() {
       console.log(" ..circle",circle.attr('id'),"BEFORE:",circle.attr("class"));
       circle
 	.classed( 'main', on );
-      // if( on ) {circle.style('fill','green')}
-      //   else {circle.style('fill','yellow')}
+      // if( on ) {circle.style('fill','red')}
+      //   else {circle.style('fill',currentColor)}
       label
 	.classed( 'on', on || currentZoom >= SHOW_THRESHOLD );
       label.selectAll('text')
@@ -374,6 +375,8 @@ function D3ok() {
       console.log(" ..SIBLINGS ["+on+"]: "+node.links);
       Object(node.links).forEach( function(id) {
 	d3.select("#c"+id).classed( 'sibling', on );
+  // if( on ) {d3.select("#c"+id).style('fill','blue')}
+  //   else {d3.select("#c"+id).style('fill',currentColor)};
 	label = d3.select('#l'+id);
 	label.classed( 'on', on || currentZoom >= SHOW_THRESHOLD );
 	label.selectAll('text.nlabel')
