@@ -272,13 +272,15 @@ circle.level2 {
 }
 
 circle.level3 {
-    fill-opacity: 0.6;
-    stroke-opacity: 0.6;
+    fill-opacity: 0.8;
+    stroke-opacity: 0.8;
+    stroke: #777;
 }
 
 circle.level4 {
-    fill-opacity: 0.4;
-    stroke-opacity: 0.4;
+    fill-opacity: 0.8;
+    stroke-opacity: 0.8;
+    stroke: #777;
 }
 
 circle.sibling {
