@@ -1,7 +1,7 @@
-# MIA Graph Show
+# Cuimage Graph Show
 
 
-A visualization of knowledge graph on the Mia-200Million datasets.
+A visualization of knowledge graph on billion web images.
 
 ![An Example](TigerCat.png)
 
