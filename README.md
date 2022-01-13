@@ -1,7 +1,8 @@
 # CuImage Dynamic Knowledge Graph
 
 
-A visualization of knowledge graph on billion web images.
+This repo is an implementation of knowledge graph visualization on billion web images in ["cuimage: a neverending learning platform on a convolutional knowledge graph of billion web images"](https://arxiv.org/abs/2107.03609), accepted by Big Data 2018. 
+
 
 ![An Example](TigerCat.png)
 
