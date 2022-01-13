@@ -1,4 +1,4 @@
-# Cuimage Graph Show
+# CuImage Dynamic Knowledge Graph
 
 
 A visualization of knowledge graph on billion web images.
