@@ -1,7 +1,7 @@
 # MIA Graph Show
 
 
-A visualization of knowledge graph on the Mia-200M datasets.
+A visualization of knowledge graph on the Mia-200Million datasets.
 
 ![An Example](TigerCat.png)
 
