@@ -1,10 +1,9 @@
 # MIA Graph Show
 
-=========================
-
 
 A visualization of knowledge graph on the Mia-200M datasets.
 
+![An Example](TigerCat.png)
 
 [Here](https://lingyunwu14.github.io/mia-graph-show/) is an example of "TigerCat" to visualization. Click on any node to see its corresponding picture, and its related nodes will be displayed at the same time. You can also zoom in or out by sliding the mouse wheel. More fun operations are waiting for you to explore!
 
